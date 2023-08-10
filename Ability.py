@@ -6,10 +6,10 @@ class Ability(ABC):
         self.description = description
 
 class Jutsu(Ability):
-    def __init__(self, name, description, damage, stress):
+    def __init__(self, name, description, damage, сhakra_consumption):
         super().__init__(name, description)
         self.damage = damage
-        self.stress = stress
+        self.сhakra_consumption = сhakra_consumption
 
     def perform(self):
         return f"used {self.name}!"
@@ -18,23 +18,23 @@ class Jutsu(Ability):
 class Taijutsu(Jutsu):
     type = "Taijutsu"
 
-    def __init__(self, name, description, damage, stress):
-        super().__init__(name, description, damage, stress)
+    def __init__(self, name, description, damage, сhakra_consumption):
+        super().__init__(name, description, damage, сhakra_consumption)
 
 
 class Ninjustu(Jutsu):
     type = "Ninjutsu"
 
-    def __init__(self, name, description, damage, stress, nature=None):
-        super().__init__(name, description, damage, stress)
+    def __init__(self, name, description, damage, сhakra_consumption, nature=None):
+        super().__init__(name, description, damage, сhakra_consumption)
         self.nature = nature
 
 
 class Genjutsu(Jutsu):
     type = "Genjutsu"
 
-    def __init__(self, name, description, damage, stress):
-        super().__init__(name, description, damage, stress)
+    def __init__(self, name, description, damage, сhakra_consumption):
+        super().__init__(name, description, damage, сhakra_consumption)
 
 
 class PassiveAbility(Ability):
