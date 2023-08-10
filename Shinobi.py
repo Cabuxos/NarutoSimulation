@@ -1,5 +1,5 @@
 from typing import List
-from Jutsu import Jutsu
+from Ability import Jutsu
 
 
 class Shinobi():

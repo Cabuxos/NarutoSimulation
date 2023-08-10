@@ -1,4 +1,4 @@
-from Jutsu import Ninjustu, Taijutsu
+from Ability import Ninjustu, Taijutsu
 from Shinobi import Shinobi
 from Team import Team
 

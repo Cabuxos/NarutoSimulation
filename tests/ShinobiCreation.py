@@ -1,4 +1,4 @@
-from Jutsu import Ninjustu
+from Ability import Ninjustu
 from Shinobi import Shinobi
 
 rasengan = Ninjustu("rasengan", 'ninjutsu', 100, 3, "no")
