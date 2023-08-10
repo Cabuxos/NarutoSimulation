@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
+from Ability import Ability
 
 
-class Jutsu(ABC):
+class Jutsu(Ability):
     def __init__(self, name, type, damage, stress):
         self.name = name
         self.type = type
