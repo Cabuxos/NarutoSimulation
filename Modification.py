@@ -1,15 +1,22 @@
-class Modification():
+from abc import ABC, abstractmethod
+
+
+class Modification(ABC):
     def __init__(self, name, description):
         self.name = name
         self.description = description
 
 
-class ArmorModification():
+class ArmorModification(Modification):
     def apply_to(self, shinobi):
-        shinobi.health_limit += 30
+        shinobi._basic_health_limit += 30
 
     def remove_from(self, shinobi):
-        shinobi.health_limit -= 30
+        shinobi._basic_health_limit -= 30
 
-class ChakraRegenerationModificacion(Modification):
-    #Дописать
+class ChakraBoostModificacion(Modification):
+    def apply_to(self, shinobi):
+        shinobi.chakra_limit += 30
+
+    def remove_from(self, shinobi):
+        shinobi.chakra_limit -= 30

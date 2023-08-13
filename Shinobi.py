@@ -2,15 +2,20 @@ from typing import List
 from Ability import Jutsu
 from Clan import Clan
 from State import NormalState
+from Team import Team
+from Village import Village
 
 
 class Shinobi():
-    def __init__(self, name, abilities: List[Jutsu], clan: Clan = None):
+    def __init__(self, name, abilities: List[Jutsu], clan: Clan = None, team: Team = None, village: Village = None):
         self.name = name
+        self.clan = clan
+        self.team = team
+        self.village = village
         self._state = NormalState()
         self.abilities = abilities
         self.modifications = []
-        self.clan = clan
+
         self._basic_chakra_limit = 100
         self._basic_health_limit = 100
 

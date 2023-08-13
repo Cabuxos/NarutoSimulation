@@ -1,14 +1,14 @@
+from __future__ import annotations
 from typing import List
-from Shinobi import Shinobi
-
 
 class Team:
-    def __init__(self, name="<BasicTeamName>", members: List[Shinobi]=None):
+    def __init__(self, name="<BasicTeamName>", members: List[object]=None):
         self.name = name
         self.members = members or []
         self.leader = None
 
     def add_member(self, shinobi):
+        from Shinobi import Shinobi
         if len(self.members) < 4:
             if isinstance(shinobi, Shinobi):
                 if shinobi not in self.members:
